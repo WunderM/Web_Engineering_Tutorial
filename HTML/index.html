@@ -6,6 +6,12 @@
     <!-- Aufgaben aus dem Kapitel Favicon-->
     <link rel="icon" type="image/x-icon" href="Logo_der_Hochschule_Flensburg.jpg">
 
+    <!-- Aufgaben aus dem Kapitel Head-->
+    <meta charset="UTF-8">
+    <meta name="beschreibung" content="HTML Turorial">
+    <meta name="Stichwoerter" content="HTML, CSS, JavaScript">
+    <meta name="Autor" content="Maurice Wunder">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 
         Aufgaben aus dem Kapitel CSS 
         Internal CSS
@@ -30,12 +36,212 @@
         p {
             color: red;
         }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+            /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
     </style>
     <!-- External CSS-->
     <link rel="stylesheet" href="styless.css">
 </head>
 
 <body>
+    <!-- Aufgaben aus dem Kapitel Input Form Attributes-->
+    <form action="actionSeite.php">
+        <label for="fname">Vorname:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Nachname:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Bestätigen">
+        <input type="submit" formtarget="_blank" value="Bestätigen für ein neues fenster/tab">
+      </form>
+
+    <!-- Aufgaben aus dem Kapitel Input Attributes-->
+    <form>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+    </form>
+
+    <form>
+        <label for="country_code">Ländercode:</label>
+        <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Drei Zeichen Ländercode">
+    </form>
+
+    <form>
+        <label for="datemax">Bitte ein Datum vor 1980-01-01 eingeben:</label>
+        <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+        <label for="datemin">Bitte ein Datum nach dem 2000-01-01 eingeben:</label>
+        <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+        <label for="quantity">Anzahl (between 1 and 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+    </form>
+
+
+    <!-- Aufgaben aus dem Kapitel Input Typs-->
+    <form>
+        <label for="username">Benutzername:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="pwd">Passwort:</label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+        <input type="submit" value="Anmelden">
+    </form>
+    <br>
+    <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> Ich habe ein Motorrad</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> Ich habe ein Auto</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> Ich habe ein Boot</label>
+    </form>
+    <br>
+    <!-- Aufgaben aus dem Kapitel Form Elements-->
+    <label for="cars">Wähle eine oder mehrere Automarken:</label> <br>
+    <select id="cars" name="cars" size="4" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi" selected>Audi</option>
+    </select>
+    <p></p>
+    <textarea name="benachrichtigung" rows="10" cols="30">Dies ist ein Hinweistext
+    </textarea>
+    <!-- Aufgaben aus dem Kapitel Form Attributes-->
+    <form action="aktionsseite.php">
+        <label for="fname">Vorname:</label><br>
+        <input type="text" id="fname" name="fname" value="Vorname"><br>
+        <label for="lname">Nachname:</label><br>
+        <input type="text" id="lname" name="lname" value="Nachname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Aufgaben aus dem Kapitel Forms-->
+    <form>
+        <label for="fname">Vorname:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Nachname:</label><br>
+        <input type="text" id="lname" name="lname">
+    </form>
+
+    <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </form>
+
+    <!-- Aufgaben aus dem Kapitel Emojis-->
+    <p>Ich zeige A B C</p>
+    <p>Ich zeige &#65; &#66; &#67;</p>
+
+    <p>Dies sind Emojis<br></p>
+    <p style="font-size:48px">
+        &#128512; &#128516; &#128525; &#128151;
+    </p>
+
+    <!-- Aufgaben aus dem Kapitel Symbols-->
+    <p>Ansicht für das Symbol &euro;</p>
+    <p>Ansicht für das Symbol &#8364;</p>
+    <p>Ansicht für das Symbol &#x20AC;</p>
+
+    <!-- Aufgaben aus dem Kapitel Computercode-->
+    <code>
+            x = 5;
+            y = 6;
+            z = x + y;
+    </code>
+
+    <p>So kann ich Variablen darstellen <var>z</var></p>
+
+    <!-- Aufgaben aus dem Kapitel Layout-->
+    <header>
+        <h2>Cities</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>London</h1>
+            <p>London ist die Hauptstadt von England</p>
+            <p>weitere Informationen betüglich London folgen in kürze.</p>
+        </article>
+    </section>
+    <footer style="text-align: center;">
+        <p>Unterste Ebene</p>
+    </footer>
+
     <!-- Aufgaben aus dem Kapitel File Paths-->
     <img src="tennis01.jpg" alt="tennis01">
 
