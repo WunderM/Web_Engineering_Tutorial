@@ -118,7 +118,7 @@ p {
     margin: 25px 0 25px 0;
 }
 
-div.fix{
+div.fix {
     padding-top: 50px;
     padding-right: 30px;
     padding-bottom: 50px;
@@ -131,8 +131,24 @@ div.easy {
     box-sizing: border-box;
 }
 
-div.heigh{
+div.heigh {
     height: 100px;
-  width: 500px;
-  background-color: powderblue;
+    width: 500px;
+    background-color: powderblue;
+}
+
+div.text {
+
+    background-color: blue;
+    color: white;
+}
+
+p.text {
+    text-align-last: right;
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    text-decoration-line: overline underline;
+    text-decoration-color: purple;
+    text-indent: 50px;
+    text-shadow: 2px 2px;
 }
