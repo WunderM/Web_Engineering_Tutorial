@@ -318,6 +318,16 @@ div.center p {
     vertical-align: middle;
 }
 
-div.Combi ~ p.Combi {
+div.Combi~p.Combi {
     background-color: yellow;
-  }
+}
+
+p.pseudo {
+    display: none;
+    background-color: yellow;
+    padding: 20px;
+}
+
+div.pseudo:hover p {
+    display: block;
+}
