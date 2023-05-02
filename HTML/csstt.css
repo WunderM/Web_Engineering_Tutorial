@@ -121,3 +121,9 @@ div.easy {
     padding: 25px;
     box-sizing: border-box;
 }
+
+div.high{
+    height: 100px;
+  width: 500px;
+  background-color: powderblue;
+}
