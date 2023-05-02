@@ -47,3 +47,10 @@ p {
     text-align: center;
     color: blue;
 }
+
+body {
+    background-color: lightgrey;
+    opacity: 0.1;
+    background: lightgrey url("Logo_der_Hochschule_Flensburg.jpg") no-repeat center;
+    background-attachment: fixed;
+}
