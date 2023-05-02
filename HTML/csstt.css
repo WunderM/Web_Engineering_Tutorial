@@ -317,3 +317,7 @@ div.center p {
     display: inline-block;
     vertical-align: middle;
 }
+
+div.Combi ~ p.Combi {
+    background-color: yellow;
+  }
