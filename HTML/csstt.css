@@ -108,7 +108,7 @@ p.mix {
     border-style: dotted dashed solid double;
 }
 
-p.costom{
+p.costom {
     border: 2px solid black;
     border-radius: 5px;
     border-top-style: dotted;
@@ -153,33 +153,57 @@ p.text {
     text-shadow: 2px 2px;
 }
 
-p.fonts{
+p.fonts {
     font-family: "Trirong", serif;
     font-size: 30px
 }
 
-p.fonts2{
+p.fonts2 {
     font-family: 'Brush Script MT', cursive;
 }
 
 p.normal {
     font-weight: normal;
-  }
-  
-  p.thick {
-    font-weight: bold;
-  }
+}
 
-  a:link, a:visited {
+p.thick {
+    font-weight: bold;
+}
+
+a:link,
+a:visited {
     background-color: #f44336;
     color: white;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-  }
-  
-  a:hover, a:active {
+}
+
+a:hover,
+a:active {
     background-color: red;
-  }
-  
+}
+
+ol {
+    background: #ff9999;
+    padding: 20px;
+}
+
+ul {
+    background: #3399ff;
+    padding: 20px;
+}
+
+ol li {
+    background: #ffe5e5;
+    color: darkred;
+    padding: 5px;
+    margin-left: 35px;
+}
+
+ul li {
+    background: #cce5ff;
+    color: darkblue;
+    margin: 5px;
+}
