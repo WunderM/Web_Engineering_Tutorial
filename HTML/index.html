@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML-Tutorial</title>
+    <!-- Aufgaben aus dem Kapitel Favicon-->
+    <link rel="icon" type="image/x-icon" href="Logo_der_Hochschule_Flensburg.jpg">
+
+    <!-- Aufgaben aus dem Kapitel Head-->
+    <meta charset="UTF-8">
+    <meta name="beschreibung" content="HTML Turorial">
+    <meta name="Stichwoerter" content="HTML, CSS, JavaScript">
+    <meta name="Autor" content="Maurice Wunder">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        Aufgaben aus dem Kapitel CSS 
+        Internal CSS
+    -->
+    <style>
+        .city {
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        body {
+            background-color: beige;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        p {
+            color: red;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #666;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #f1f1f1;
+            height: 300px;
+            /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+    <!-- External CSS-->
+    <link rel="stylesheet" href="styless.css">
+</head>
+
+<body>
+    <!-- Aufgaben aus dem Kapitel Input Form Attributes-->
+    <form action="actionSeite.php">
+        <label for="fname">Vorname:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Nachname:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="submit" value="Bestätigen">
+        <input type="submit" formtarget="_blank" value="Bestätigen für ein neues fenster/tab">
+      </form>
+
+    <!-- Aufgaben aus dem Kapitel Input Attributes-->
+    <form>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+    </form>
+
+    <form>
+        <label for="country_code">Ländercode:</label>
+        <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Drei Zeichen Ländercode">
+    </form>
+
+    <form>
+        <label for="datemax">Bitte ein Datum vor 1980-01-01 eingeben:</label>
+        <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+        <label for="datemin">Bitte ein Datum nach dem 2000-01-01 eingeben:</label>
+        <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+        <label for="quantity">Anzahl (between 1 and 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+    </form>
+
+
+    <!-- Aufgaben aus dem Kapitel Input Typs-->
+    <form>
+        <label for="username">Benutzername:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="pwd">Passwort:</label><br>
+        <input type="password" id="pwd" name="pwd"><br>
+        <input type="submit" value="Anmelden">
+    </form>
+    <br>
+    <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> Ich habe ein Motorrad</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> Ich habe ein Auto</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> Ich habe ein Boot</label>
+    </form>
+    <br>
+    <!-- Aufgaben aus dem Kapitel Form Elements-->
+    <label for="cars">Wähle eine oder mehrere Automarken:</label> <br>
+    <select id="cars" name="cars" size="4" multiple>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi" selected>Audi</option>
+    </select>
+    <p></p>
+    <textarea name="benachrichtigung" rows="10" cols="30">Dies ist ein Hinweistext
+    </textarea>
+    <!-- Aufgaben aus dem Kapitel Form Attributes-->
+    <form action="aktionsseite.php">
+        <label for="fname">Vorname:</label><br>
+        <input type="text" id="fname" name="fname" value="Vorname"><br>
+        <label for="lname">Nachname:</label><br>
+        <input type="text" id="lname" name="lname" value="Nachname"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- Aufgaben aus dem Kapitel Forms-->
+    <form>
+        <label for="fname">Vorname:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Nachname:</label><br>
+        <input type="text" id="lname" name="lname">
+    </form>
+
+    <form>
+        <input type="radio" id="html" name="fav_language" value="HTML">
+        <label for="html">HTML</label><br>
+        <input type="radio" id="css" name="fav_language" value="CSS">
+        <label for="css">CSS</label><br>
+        <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+    </form>
+
+    <!-- Aufgaben aus dem Kapitel Emojis-->
+    <p>Ich zeige A B C</p>
+    <p>Ich zeige &#65; &#66; &#67;</p>
+
+    <p>Dies sind Emojis<br></p>
+    <p style="font-size:48px">
+        &#128512; &#128516; &#128525; &#128151;
+    </p>
+
+    <!-- Aufgaben aus dem Kapitel Symbols-->
+    <p>Ansicht für das Symbol &euro;</p>
+    <p>Ansicht für das Symbol &#8364;</p>
+    <p>Ansicht für das Symbol &#x20AC;</p>
+
+    <!-- Aufgaben aus dem Kapitel Computercode-->
+    <code>
+            x = 5;
+            y = 6;
+            z = x + y;
+    </code>
+
+    <p>So kann ich Variablen darstellen <var>z</var></p>
+
+    <!-- Aufgaben aus dem Kapitel Layout-->
+    <header>
+        <h2>Cities</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Tokyo</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>London</h1>
+            <p>London ist die Hauptstadt von England</p>
+            <p>weitere Informationen betüglich London folgen in kürze.</p>
+        </article>
+    </section>
+    <footer style="text-align: center;">
+        <p>Unterste Ebene</p>
+    </footer>
+
+    <!-- Aufgaben aus dem Kapitel File Paths-->
+    <img src="tennis01.jpg" alt="tennis01">
+
+    <!-- Aufgaben aus dem Kapitel JavaScript-->
+    <h1 id="demo">Meine Städte</h1>
+
+    <script>
+        document.getElementById("demo").innerHTML = "Hallo JavaScript!";
+        document.getElementById("demo").style.fontSize = "25px";
+        document.getElementById("demo").style.color = "blue";
+        document.getElementById("demo").style.backgroundColor = "red";
+    </script>
+
+    <!-- Aufgaben aus dem Kapitel Iframe-->
+    <iframe src="test.htm" name="iframe_a" title="Iframe Beispiel"></iframe>
+
+    <!-- Aufgaben aus dem Kapitel Id-->
+    <!-- Ein Element mit einer eindeutigen id -->
+    <h1 id="meineStadt">Meine Städte</h1>
+
+    <!-- Aufgaben aus dem Kapitel Classes-->
+    <div class="city">
+        <h2>London</h2>
+        <p>London ist die Hauptstadt von England.</p>
+    </div>
+
+    <div class="city">
+        <h2>Paris</h2>
+        <p>Paris ist die Hauptstadt von France.</p>
+    </div>
+
+    <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo ist die Hauptstadt von Japan.</p>
+    </div>
+
+
+    <!-- Aufgaben aus dem Kapitel Block & Inline-->
+    <!-- Container Element-->
+    <div style="background-color:black;color:white;padding:20px;">
+        <h2>London</h2>
+        <p>London ist die Hauptstadt von England.</p>
+    </div>
+
+    <!-- Inline Container-->
+    <p>Ich habe <span style="color:rgb(97, 64, 4);font-weight:bold;">braune</span> Augen und mein Vater hat <span
+            style="color:rgb(97, 64, 4);font-weight:bold;">braune</span> Augen.</p>
+
+    <!-- Aufgaben aus dem Kapitel Lists-->
+    <ul style="list-style-type:disc;">
+        <li>Kaffee</li>
+        <li>Tee</li>
+        <li>Milch</li>
+    </ul>
+
+    <ol>
+        <li>Kaffee</li>
+        <li>Tee</li>
+        <li>Milch</li>
+    </ol>
+
+    <dl>
+        <dt>Kaffee</dt>
+        <dd>- Schwarzes heiß Getränk</dd>
+        <dt>Milch</dt>
+        <dd>- weißes kalt Getränk</dd>
+    </dl>
+
+    <!-- Aufgaben aus dem Kapitel Tables-->
+    <table>
+        <colgroup>
+            <col span="1" style="background-color: #9dff84">
+        </colgroup>
+        <tr>
+            <th>Unternehmen</th>
+            <th>Kontaktperson</th>
+            <th>Land</th>
+        </tr>
+        <tr>
+            <td>Tesla</td>
+            <td>Elon Musk</td>
+            <td>America</td>
+        </tr>
+        <tr>
+            <td>Tacoss Software GmbH</td>
+            <td>Maurice Wunder</td>
+            <td>Deutschland</td>
+        </tr>
+    </table>
+
+    <!-- Aufgaben aus dem Kapitel Links-->
+
+    <a href="Logo_der_Hochschule_Flensburg.jpg">
+        <img src="Logo_der_Hochschule_Flensburg.jpg" alt="Hochschule Flensburg Logo" style="width:42px;height:42px;">
+    </a>
+
+    <a href="mailto:maurice.wunder@t-online.de">Email Senden</a>
+
+    <button onclick="document.location='Logo_der_Hochschule_Flensburg.jpg'">Button zum Logo</button>
+
+    <a href="https://hs-flensburg.de/" title="Gehe zur Hochschule Flensburg">HS Flensburg besuchen</a>
+
+    <!-- Aufgaben aus dem Kapitel CSS -->
+
+    <!-- Inline CSS-->
+    <h1 style="color:blue;">Blaue Überschrift</h1>
+
+    <p style="color:red;">Roter Paragraph.</p>
+
+    <!-- Aufgaben aus dem Kapitel Colors -->
+    <h1 style="background-color:rgb(255, 99, 71);">...</h1>
+    <h1 style="background-color:#ff6347;">...</h1>
+    <h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+    <h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+    <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
+
+    <!-- 
+        rgba(Rot, Gruen, Blau, Alpha) 
+        #rrggbb
+        hsl(hue, saturation, lightness)
+    -->
+
+    <!-- Aufgaben aus dem Kapitel Comments-->
+    <!-- 
+        Aufgabe Comments schon durch die anderen Aufgaben
+        geübt und häufig auch umgesetzt    
+    -->
+
+    <!-- Aufgaben aus dem Kapitel Quatations-->
+    <p>Hier ist eine Referenz zu Wikipedia:</p>
+    <blockquote cite="https://de.wikipedia.org/wiki/Duschhaube">
+        Eine Duschhaube wird verwendet, um beim Duschen keine nassen Haare zu bekommen. Im Gegensatz zur Badekappe
+        schützt die Duschhaube das Haar (insbesondere die Dauerwelle) beim Duschen vor Spritzwasser des Duschkopfs und
+        nicht wie die Badekappe das Schwimmbadwasser vor Verunreinigungen durch ausfallendes Kopfhaar. Üblicherweise
+        besteht die Haube aus Kunststoff und schließt, anders als die Regenhaube, mit einem Gummizug am Rand ab.
+    </blockquote>
+
+    <p>Wikipedia sagt dazu: <q>Eine Duschhaube wird verwendet, um beim Duschen keine nassen Haare zu bekommen.</q></p>
+
+    <p>Die <abbr title="World Wide Web">WWW</abbr> gibt es schon sehr lange</p>
+
+    <address>
+        Geschrieben von Maurice Wunder.<br>
+        Besuche uns:<br>
+        wunder.de<br>
+        Hattlundmoor 5,24972 Flensburg<br>
+        Deutschland
+    </address>
+
+    <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+    <bdo dir="rtl">Dieser Text wird von rechts nach links geschrieben</bdo><br>
+
+
+    <!-- Aufgaben aus dem Kapitel Formatting-->
+    <i> Dies ist ein Text in italic</i><br>
+    <em> Dies ist ein Text in ebpharized</em><br>
+    <small>Dies ist ein kleinerer Text</small><br>
+    <p> Das folgende Wort ist hervorgehoben <mark>HTML<mark></p>
+    <p> Das folgende Wort ist durchgestrichen <del>Test<del></p>
+    <p> Das folgende Wort ist unterstrichen <ins>HTML<ins></p>
+    <p> Das folgende Wort ist ein sub text nach unten <sub>HTML<sub></p>
+    <p> Das folgende Wort ist ein sub text nach oben <sup>HTML<sup></p>
+
+    <!-- Aufgaben aus dem Kapitel Styles -->
+    <h1 style="font-family: Verdana; text-align: center;">Dies ist eine Überschrift</h1>
+    <p style="font-family: courier;">Dies ist ein Paragraph.</p>
+
+    <h1 style="background-color:powderblue; color: blueviolet;">Dies ist eine Überschrift</h1>
+    <p style="background-color:tomato;color: green;">Dies ist ein Paragraph.</p>
+
+    <!-- Aufgaben aus dem Kapitel Paragraphs -->
+    <h1>Überschrift 1</h1>
+    <p>Ein wenig Text.</p>
+    <hr> <!-- dient für einen Thematischen Umbruch -->
+    <h2>Überschrift 2</h2>
+    <p>weiterer Text.</p>
+    <hr>
+
+    <p> Dies ist <br> ein Paragraph <br> mit Zeilen Umbrüchen</p>
+
+    <!-- Preformatted Text -->
+    <pre>
+        My Bonnie lies over the ocean.
+      
+        My Bonnie lies over the sea.
+      
+        My Bonnie lies over the ocean.
+      
+        Oh, bring back my Bonnie to me.
+      </pre>
+
+    <!-- Aufgaben aus dem Kapitel Headings -->
+    <h1>Überschrift H1</h1>
+    <h1 style="font-size:60px;">Überschrift 1 Größer</h1>
+    <h2>Überschrift H2</h2>
+    <h3>Überschrift H3</h3>
+    <h4>Überschrift H4</h4>
+    <h5>Überschrift H5</h5>
+    <h6>Überschrift H6</h6>
+
+    <!-- Aufgaben aus dem Kapitel Attributes-->
+    <p style="color:red;">Das ist ein roter paragraph.</p>
+
+    <img src="kann_dich_nicht_finden.jpg" alt="Hier sollte eigentlich ein Bild kommen">
+
+    <!-- Aufgaben aus dem Kapitel Basic -->
+    <h1>Das ist eine Überschrift H1</h1>
+    <h2>Das ist eine Überschrift H2</h2>
+    <h3>Das ist eine Überschrift H3</h3>
+
+    <p>Das ist ein Absatz</p>
+
+    <a href="https:www.google.com"> Das ist ein Link</a>
+
+    <img src="Logo_der_Hochschule_Flensburg.jpg" alt="Logo Hochschule Flensburg" width="400" height="300">
+</body>
+
+</html>
