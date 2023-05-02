@@ -57,34 +57,43 @@ body {
 
 p.dotted {
     border-style: dotted;
+    outline: thick blue dotted;
 }
 
 p.dashed {
     border-style: dashed;
+    outline: thin purple dashed;
 }
 
 p.solid {
     border-style: solid;
+    outline-style: solid;
+
 }
 
 p.double {
     border-style: double;
+    outline-style: double;
 }
 
 p.groove {
     border-style: groove;
+    outline-style: groove;
 }
 
 p.ridge {
     border-style: ridge;
+    outline-style: ridge;
 }
 
 p.inset {
     border-style: inset;
+    outline-style: inset;
 }
 
 p.outset {
     border-style: outset;
+    outline-style: outset;
 }
 
 p.none {
@@ -122,7 +131,7 @@ div.easy {
     box-sizing: border-box;
 }
 
-div.high{
+div.heigh{
     height: 100px;
   width: 500px;
   background-color: powderblue;
