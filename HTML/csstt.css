@@ -332,7 +332,11 @@ div.pseudo:hover p {
     display: block;
 }
 
-::marker { 
+::marker {
     color: red;
     font-size: 23px;
-  }
+}
+
+img.opacity:hover {
+    opacity: 0.5;
+}
