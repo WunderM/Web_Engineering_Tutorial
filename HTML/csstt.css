@@ -108,3 +108,16 @@ p {
     border-left-style: solid;
     margin: 25px 0 25px 0;
 }
+
+div.fix{
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+div.easy {
+    width: 300px;
+    padding: 25px;
+    box-sizing: border-box;
+}
