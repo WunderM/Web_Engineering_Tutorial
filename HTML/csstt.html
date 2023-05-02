@@ -9,232 +9,57 @@
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
 <body>
-    <div class="dropdown">
-        <button class="dropbtn">Dropdown</button>
-        <div class="dropdown-content">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+    <h2>Responsive Image Gallery</h2>
+
+    <h4>Resize the browser window to see the effect.</h4>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img_5terre.jpg">
+                <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+            </a>
+            <div class="desc">Beschreibung hinzufügen</div>
         </div>
-      </div>
-
-
-    <h1>Transparente Bilder</h1>
-    <p>Sichtbarkeit durch Maushover einstellen</p>
-    <img class="opacity" src="img_forest.jpg" alt="Forest" width="170" height="100">
-    <img class="opacity" src="img_mountains.jpg" alt="Mountains" width="170" height="100">
-    <img class="opacity" src="img_5terre.jpg" alt="Italy" width="170" height="100">
-
-
-
-    <ul>
-        <li>Kafffee</li>
-        <li>Tea</li>
-        <li>Milch</li>
-    </ul>
-
-    <ol>
-        <li>Erstes</li>
-        <li>Zweites</li>
-        <li>Drittes</li>
-    </ol>
-
-    <div class="pseudo">Gehe auf dieses element um das P Element angezeigt zu bekommen
-        <p class="pseudo">Tada! Hier bin ich !</p>
     </div>
 
-    <div class="Combi">
-        <p>Paragraph 2.</p>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img_forest.jpg">
+                <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+            </a>
+            <div class="desc">Beschreibung hinzufügen</div>
+        </div>
     </div>
 
-    <p class="Combi">Paragraph 3.</p>
-    <code>Some code.</code>
-    <p class="Combi">Paragraph 4.</p>
-
-    <div class="center">
-        <p>Ich bin vertikal und horizonzal zentriert.</p>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img_lights.jpg">
+                <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">Beschreibung hinzufügen</div>
+        </div>
     </div>
 
-    <ul class="nav">
-        <li><a href="#home">Start</a></li>
-        <li><a href="#about">Über uns</a></li>
-        <li><a href="#clients">unsere Kunden</a></li>
-        <li><a href="#contact">Kontaktieren Sie uns</a></li>
-    </ul>
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="img_mountains.jpg">
+                <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+            </a>
+            <div class="desc">Beschreibung hinzufügen </div>
+        </div>
+    </div>
 
-    <div class="clearfix">
-        <p>
-            <img class="float" src="Logo_der_Hochschule_Flensburg.jpg" alt="Hochschule"
-                style="width:170px;height:170px;">
-            Korralen sind eingezäunte Bereiche, die für die Haltung von Vieh, insbesondere Rindern und Pferden,
-            verwendet
-            werden. Diese Strukturen sind in der Regel aus Holz oder Metall gebaut und können je nach Bedarf
-            unterschiedliche Größen und Formen haben.
+    <div class="clearfix"></div>
 
-            Die Verwendung von Korralen hat eine lange Geschichte und ist in vielen ländlichen Regionen der Welt ein
-            wichtiger Bestandteil der Landwirtschaft. Korralen werden oft in der Nähe von Ställen gebaut und dienen
-            dazu,
-            das Vieh während des Fütterns, der Tierarztbehandlungen und der Zucht zu kontrollieren und zu sichern.
-
-            Einige Korralen sind besonders für Rodeos und andere Wettkämpfe geeignet, bei denen Rinder oder Pferde
-            gezähmt
-            oder geritten werden. Diese Korralen sind oft größer und haben spezielle Merkmale wie Bullenboxen und
-            Rodeo-Ausgänge.
+    <div style="padding:6px;">
+        <p>Dieses Beispiel verwendet Media Queries, um die Bilder auf verschiedenen Bildschirmgrößen neu anzuordnen: Für
+            Bildschirme, die breiter als 700px sind, werden vier Bilder nebeneinander angezeigt, für Bildschirme, die
+            kleiner als 700px sind, werden zwei Bilder nebeneinander angezeigt. Für Bildschirme, die kleiner als 500px
+            sind, werden die Bilder vertikal gestapelt (100%).
         </p>
+        <p>Später in unserem CSS-Tutorial wirst du mehr über Media Queries und Responsive Webdesign erfahren.</p>
     </div>
-    <br>
-
-    <div class="overflow">Korralen sind in der Regel umzäunte Bereiche, die dazu dienen, Tiere einzusperren oder zu
-        halten. Sie werden oft in der Landwirtschaft eingesetzt, um Tiere wie Rinder, Schafe oder Pferde zu halten. Auch
-        in der Viehzucht werden Korralen genutzt, um die Tiere während der Schlachtung oder bei der tierärztlichen
-        Behandlung zu kontrollieren und zu sichern.
-
-    </div>
-
-    <div class="container">
-        <div class="black-box">Schwarze box</div>
-        <div class="gray-box">Graue box</div>
-        <div class="green-box">Grüne box</div>
-    </div>
-
-    <div class="relativ">
-        <p>relative Position</p>
-    </div>
-
-    <div class="absolute">
-        <p>absolute Position</p>
-    </div>
-
-    <div style="overflow-x: auto;">
-        <table>
-            <tr>
-                <th>Vorname</th>
-                <th>Nachname</th>
-                <th>Punkte</th>
-                <th>Punkte</th>
-                <th>Punkte</th>
-                <th>Punkte</th>
-                <th>Punkte</th>
-                <th>Punkte</th>
-                <th>Punkte</th>
-                <th>Punkte</th>
-                <th>Punkte</th>
-                <th>Punkte</th>
-            </tr>
-            <tr>
-                <td>Jill</td>
-                <td>Smith</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-                <td>50</td>
-            </tr>
-            <tr>
-                <td>Eve</td>
-                <td>Jackson</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-                <td>94</td>
-            </tr>
-            <tr>
-                <td>Adam</td>
-                <td>Johnson</td>
-                <td>67</td>
-                <td>67</td>
-                <td>67</td>
-                <td>67</td>
-                <td>67</td>
-                <td>67</td>
-                <td>67</td>
-                <td>67</td>
-                <td>67</td>
-                <td>67</td>
-            </tr>
-        </table>
-    </div>
-    <ol>
-        <li>Kaffee</li>
-        <li>Tea</li>
-        <li>Coca Cola</li>
-    </ol>
-
-    <ul>
-        <li>Kaffee</li>
-        <li>Tea</li>
-        <li>Coca Cola</li>
-    </ul>
-
-    <span style="cursor: auto">Auto</span><br>
-    <span style="cursor: crosshair">Fadenkreuz</span><br>
-    <span style="cursor: default">Standard</span><br>
-    <span style="cursor: e-resize">Links/Rechts Zeiger</span><br>
-    <span style="cursor: help">Fragezeichen</span><br>
-    <span style="cursor: move">Bewegen</span><br>
-    <span style="cursor: n-resize">Oben/Untenzeiger</span><br>
-    <span style="cursor: ne-resize">Diagonalzeiger Nord Ost</span><br>
-    <span style="cursor: nw-resize">Diagonalzeiger Nord West</span><br>
-    <span style="cursor: pointer">Hand</span><br>
-    <span style="cursor: progress">In Arbeit</span><br>
-    <span style="cursor: s-resize">Oben/Untenzeiger</span><br>
-    <span style="cursor: se-resize">Diagonalzeiger Süd Ost</span><br>
-    <span style="cursor: sw-resize">Diagonalzeiger Süd West</span><br>
-    <span style="cursor: text">text</span><br>
-    <span style="cursor: w-resize">Links/Rechts Zeiger</span><br>
-
-    <i class="material-icons">cloud</i>
-    <i class="material-icons">favorite</i>
-    <i class="material-icons">attachment</i>
-    <i class="material-icons">computer</i>
-    <i class="material-icons">traffic</i>
-
-    <p class="fonts">Fonts</p>
-    <p class="fonts2">0 1 2 3 4 5 6 7 8 9</p>
-
-    <div class="text">
-        <p class="text">
-            Hier kommt nun ein langer text
-        </p>
-    </div>
-
-    <div class="heigh">
-        <p> Hier kommt mein Text </p>
-    </div>
-
-    <div>
-        <p> Hier kommt mein Text </p>
-    </div>
-
-    <div>
-        <p> Hier kommt mein Text </p>
-    </div>
-
-    <p class="center large">This paragraph refers to two classes.</p>
-
-    <p class="dotted">gepunkte Umrandung</p>
-    <p class="dashed">gestrichelte Umrandung.</p>
-    <p class="solid">normale Umrandung</p>
-    <p class="double">doppeltee Umrandung.</p>
-    <p class="groove">groove Umrandung.</p>
-    <p class="ridge">hohe Umrandung.</p>
-    <p class="inset">eingesetzte Umrandung.</p>
-    <p class="outset">hervorgehobene Umrandung.</p>
-    <p class="none">Keine Umrandung.</p>
-    <p class="hidden">Versteckte Umrandung.</p>
-    <p class="mix">gemixte Umrandung.</p>
-
 </body>
 <footer>
 

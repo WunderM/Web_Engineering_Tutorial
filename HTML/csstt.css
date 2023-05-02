@@ -1,382 +1,46 @@
-/*
-    Kommentar für die Aufgabe CSS Comments eingefügt
-*/
-p {
-    text-align: center;
-    color: red;
-}
-
-#para1 {
-    text-align: center;
-    color: red;
-}
-
-.center {
-    text-align: center;
-    color: red;
-}
-
-p.center {
-    text-align: center;
-    color: red;
-}
-
-h1 {
-    text-align: center;
-    color: red;
-}
-
-h2 {
-    text-align: center;
-    color: red;
-}
-
-p {
-    text-align: center;
-    color: red;
-}
-
-h1,
-h2,
-p {
-    text-align: center;
-    color: red;
-}
-
-* {
-    text-align: left;
-    color: black;
-}
-
-body {
-    /*background-color: lightgrey;
-    opacity: 0.1;*/
-    /* background: lightgrey url("Logo_der_Hochschule_Flensburg.jpg") no-repeat center;
-    background-attachment: fixed;*/
-}
-
-p.dotted {
-    border-style: dotted;
-    outline: thick blue dotted;
-}
-
-p.dashed {
-    border-style: dashed;
-    outline: thin purple dashed;
-}
-
-p.solid {
-    border-style: solid;
-    outline-style: solid;
-
-}
-
-p.double {
-    border-style: double;
-    outline-style: double;
-}
-
-p.groove {
-    border-style: groove;
-    outline-style: groove;
-}
-
-p.ridge {
-    border-style: ridge;
-    outline-style: ridge;
-}
-
-p.inset {
-    border-style: inset;
-    outline-style: inset;
-}
-
-p.outset {
-    border-style: outset;
-    outline-style: outset;
-}
-
-p.none {
-    border-style: none;
-}
-
-p.hidden {
-    border-style: hidden;
-}
-
-p.mix {
-    border-style: dotted dashed solid double;
-}
-
-p.costom {
-    border: 2px solid black;
-    border-radius: 5px;
-    border-top-style: dotted;
-    border-right-style: solid;
-    border-bottom-style: dotted;
-    border-left-style: solid;
-    margin: 25px 0 25px 0;
-}
-
-div.fix {
-    padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
-}
-
-div.easy {
-    width: 300px;
-    padding: 25px;
-    box-sizing: border-box;
-}
-
-div.heigh {
-    height: 100px;
-    width: 500px;
-    background-color: powderblue;
-}
-
-div.text {
-
-    background-color: blue;
-    color: white;
-}
-
-p.text {
-    text-align-last: right;
-    direction: ltr;
-    unicode-bidi: bidi-override;
-    text-decoration-line: overline underline;
-    text-decoration-color: purple;
-    text-indent: 50px;
-    text-shadow: 2px 2px;
-}
-
-p.fonts {
-    font-family: "Trirong", serif;
-    font-size: 30px
-}
-
-p.fonts2 {
-    font-family: 'Brush Script MT', cursive;
-}
-
-p.normal {
-    font-weight: normal;
-}
-
-p.thick {
-    font-weight: bold;
-}
-
-a:link,
-a:visited {
-    background-color: #f44336;
-    color: white;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-
-a:hover,
-a:active {
-    background-color: red;
-}
-
-ol.list {
-    background: #ff9999;
-    padding: 20px;
-}
-
-ul.list {
-    background: #3399ff;
-    padding: 20px;
-}
-
-ol.list li.list {
-    background: #ffe5e5;
-    color: darkred;
-    padding: 5px;
-    margin-left: 35px;
-}
-
-ul.list li.list {
-    background: #cce5ff;
-    color: darkblue;
-    margin: 5px;
-}
-
-table {
-    border-collapse: collapse;
+div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
     width: 100%;
-    max-width: 450px;
-}
-
-th,
-td {
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-span {
-    display: block;
-}
-
-div.relative {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    border: 3px solid #73AD21;
-}
-
-div.absolute {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 200px;
-    height: 100px;
-    border: 3px solid #73AD21;
-}
-
-div.container {
-    position: relative;
-}
-
-div.black-box {
-    position: relative;
-    border: 2px solid black;
-    height: 100px;
-    margin: 30px;
-}
-
-div.gray-box {
-    position: absolute;
-    background: lightgray;
-    height: 60px;
-    width: 70%;
-    left: 50px;
-    top: 50px;
-}
-
-div.green-box {
-    position: absolute;
-    background: lightgreen;
-    width: 35%;
-    left: 270px;
-    top: -15px;
-    height: 100px;
-}
-
-div.overflow {
-    background-color: coral;
-    width: 200px;
-    height: 100px;
-    border: 1px solid black;
-    overflow: scroll;
-}
-
-img.float {
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
     float: left;
-}
-
-div.clearfix::after {
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
     content: "";
-    clear: both;
     display: table;
-}
-
-ul.nav {
-    background-color: yellow;
-    list-style-type: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-ul.nav li {
-    display: inline-block;
-    font-size: 20px;
-    padding: 20px;
-}
-
-div.center {
-    line-height: 200px;
-    height: 200px;
-    border: 3px solid green;
-    text-align: center;
-}
-
-div.center p {
-    line-height: 1.5;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-div.Combi~p.Combi {
-    background-color: yellow;
-}
-
-p.pseudo {
-    display: none;
-    background-color: yellow;
-    padding: 20px;
-}
-
-div.pseudo:hover p {
-    display: block;
-}
-
-::marker {
-    color: red;
-    font-size: 23px;
-}
-
-img.opacity:hover {
-    opacity: 0.5;
-}
-
-button.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  div.dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  div.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-  }
-  
-  div.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-  
-  div.dropdown-content a:hover {background-color: #f1f1f1}
-  
-  div.dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  div.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    clear: both;
   }
