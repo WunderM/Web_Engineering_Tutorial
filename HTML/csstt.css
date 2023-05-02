@@ -98,3 +98,12 @@ p.hidden {
 p.mix {
     border-style: dotted dashed solid double;
 }
+
+p {
+    border: 2px solid black;
+  border-radius: 5px;
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+  }
