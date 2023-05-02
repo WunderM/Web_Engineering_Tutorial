@@ -44,8 +44,8 @@ p {
 }
 
 * {
-    text-align: center;
-    color: blue;
+    text-align: left;
+    color: black;
 }
 
 body {
@@ -207,3 +207,16 @@ ul li {
     color: darkblue;
     margin: 5px;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
