@@ -280,4 +280,13 @@ div.overflow {
     border: 1px solid black;
     overflow: scroll;
 }
+
+img.float {
+    float: left;
+}
+
+div.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
