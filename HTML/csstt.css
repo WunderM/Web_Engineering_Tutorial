@@ -1,57 +1,17 @@
-#navlist {
-    position: relative;
-  }
-  
-  #navlist li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    position: absolute;
-    top: 0;
-  }
-  
-  #navlist li, #navlist a {
-    height: 44px;
-    display: block;
-  }
-  
-  #home {
-    left: 0px;
-    width: 46px;
-    background: url('img_navsprites.gif') 0 0;
-  }
-  
-  #prev {
-    left: 63px;
-    width: 43px;
-    background: url('img_navsprites.gif') -47px 0;
-  }
-  
-  #next {
-    left: 129px;
-    width: 43px;
-    background: url('img_navsprites.gif') -91px 0;
-  }
+body {
+  counter-reset: section;
+}
 
-  input[type=text] {
-    width: 100%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-  }
+h1 {
+  counter-reset: subsection;
+}
 
-  input[type=button], input[type=submit], input[type=reset] {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-  }
+h1::before {
+  counter-increment: section;
+  content: "Section " counter(section) ". ";
+}
+
+h2::before {
+  counter-increment: subsection;
+  content: counter(section) "." counter(subsection) " ";
+}
